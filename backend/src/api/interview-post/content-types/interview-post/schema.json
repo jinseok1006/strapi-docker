@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "interview_posts",
+  "info": {
+    "singularName": "interview-post",
+    "pluralName": "interview-posts",
+    "displayName": "InterviewPost",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "division": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "grade": {
+      "type": "integer",
+      "required": true
+    },
+    "score": {
+      "type": "enumeration",
+      "enum": [
+        "early4",
+        "late4",
+        "early3",
+        "mid3",
+        "late3",
+        "less3"
+      ],
+      "required": true
+    },
+    "takeLecture": {
+      "type": "boolean",
+      "required": true
+    },
+    "yearPrivacy": {
+      "type": "boolean",
+      "required": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
