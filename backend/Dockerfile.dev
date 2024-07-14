@@ -6,7 +6,7 @@ RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev l
 ENV NODE_ENV=development
 
 # opt 경로에 종속성 설치
-WORKDIR /opt/app
+WORKDIR /opt
 COPY package.json yarn.lock ./
 RUN yarn global add node-gyp
 RUN yarn config set network-timeout 600000 -g && yarn install

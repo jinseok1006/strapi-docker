@@ -2,7 +2,7 @@ services:
   strapi:
     build: 
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.prod
     env_file: .env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
@@ -10,12 +10,6 @@ services:
       ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
       APP_KEYS: ${APP_KEYS}
     volumes:
-      - ./database:/opt/database
-      - ./config:/opt/config
-      - ./public:/opt/public
-      - ./src:/opt/src
-      - ./types:/opt/types
-      - ./.env:/opt/.env
       - ./.tmp:/opt/.tmp
   
     ports:
